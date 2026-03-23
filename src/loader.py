@@ -5,3 +5,4 @@ def load_files(data_path):
     loader = PyMuPDFLoader(str(data_path))
     documents = loader.load()
     return documents 
+## print(load_files("../data/Trishansh.pdf"))
