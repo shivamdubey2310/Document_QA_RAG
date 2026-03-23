@@ -2,6 +2,7 @@
 from langchain_community.document_loaders import PyMuPDFLoader
 
 def load_files(data_path):
+    """This function loads the pdf from data folder"""
     loader = PyMuPDFLoader(str(data_path))
     documents = loader.load()
     return documents 
