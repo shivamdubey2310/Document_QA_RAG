@@ -1,0 +1,26 @@
+## Project Title : Document Q&A RAG System
+
+## Implementation Steps :
+
+### Step - 1 : Loading Data 
+- we will load documents from /data folder
+- loads data in pdf format (sample pdf name : software_engineer_resume.pdf)
+- we will use PyMuPDF Loader for loading the documents
+
+### Step - 2 : Chunking 
+- after loading the pdf's from /data folder , we will split into the chunks 
+- will use RecursiveCharacterTextSplitter class for chunking 
+- chunk size = ???
+- chunk overlap = ???
+
+### Step - 3 : Embeddings 
+- will convert the chunks into Embeddings(vectors) using an embedding model
+- model : all-Mini-LM-L6-v2
+
+### Step - 4 : VectorDB
+- will sore the embeddings in VectorDB
+- use chromaDB to store the embeddings 
+
+### Step - 5 : Retriever 
+- will create a Retriever to query vectorDB and find similar embedding
+- will use cosine similarity for similarity search
