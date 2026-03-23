@@ -24,3 +24,10 @@
 ### Step - 5 : Retriever 
 - will create a Retriever to query vectorDB and find similar embedding
 - will use cosine similarity for similarity search
+
+### Step - 6 : Prompt building
+- we will define the prompt with query and context
+
+### Step - 7 : Calling LLM
+- We will use groq for getting the response
+- This is the final response
