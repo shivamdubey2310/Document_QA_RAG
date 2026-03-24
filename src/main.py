@@ -1,5 +1,5 @@
 ## importing required libraries
-from loader import load_files
+from loader_liteParser import load_files
 from chunking import split_documents
 from embeddings import EmbeddingModel
 from vectorstore import VectorStore

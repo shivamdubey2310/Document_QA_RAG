@@ -7,7 +7,8 @@ def parse_with_liteparse(pdf_path):
     result = subprocess.run(
         ["lit", "parse", pdf_path, "--format", "json"],
         capture_output=True,
-        text=True
+        text=True,
+        shell=True
     )
 
     # print(json.loads(result.stdout))
@@ -27,10 +28,10 @@ def load_files(dataset_path):
 
         for page_id, page in enumerate(data.get("pages", [])):
             
-            # text = page.get("text", "")
+            text = page.get("text", "")
 
-            blocks = page.get("blocks", [])
-            text = "\n".join([b["text"] for b in blocks if b["text"].strip()])
+            # blocks = page.get("blocks", [])
+            # text = "\n".join([b["text"] for b in blocks if b["text"].strip()])
 
             doc = Document(
                 page_content=text,
@@ -47,6 +48,3 @@ def load_files(dataset_path):
     
     return documents
 
-data = load_files("../dataset/")
-
-print(data)

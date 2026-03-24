@@ -1,0 +1,15 @@
+manage workloads, scaling up or tearing down applications and services as
+
+business needs dictate, in near real time.
+
+
+
+### Running more workloads on the same hardware
+
+
+
+Docker is lightweight and fast. It provides a viable, cost-effective alternative
+
+to hypervisor-based virtual machines, so you can use more of your server
+
+capacity to achieve your business goals. Docker is perfect for high dens
