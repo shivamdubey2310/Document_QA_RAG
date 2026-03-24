@@ -32,18 +32,25 @@ def generate_response(query,context):
     """This function calls the LLM and answers the user query"""
 
     prompt = f"""
-    You are an expert assistant specialized in analyzing Resumes.
+    You are an expert assistant specialized in analyzing multiple documents.
 
-    Your task is to answer the user's question using ONLY the information provided in the context below.
+    You are given a context that may contain information from different documents 
+    (such as resumes, CVs, identity cards, forms, etc.).
 
-    Important Instructions to follow :
-    1. Do NOT use any external knowledge.
-    2. Base your answer strictly on the provided context.
-    3. If the context does not contain the answer, say:
+    Your task is to answer the user's question using ALL relevant information from the context.
+
+    Instructions:
+    1. Carefully read the entire context. It may contain multiple documents.
+    2. Extract and combine relevant information from ALL parts of the context.
+    3. Do NOT rely on a single section if multiple sections contain useful data.
+    4. If the same information appears in multiple places, consolidate it.
+    5. If there is conflicting information, mention the conflict clearly.
+    6. Do NOT use any external knowledge. Only use the provided context.
+    7. If the answer is not present in the context, say:
     "The answer is not available in the provided documents."
-    4. Provide clear and factual responses.
-    5. When possible, mention the policy name, scheme name or organization referenced in the context.
-    6. Provide a clear and concise answer.
+    8. Keep the answer clear, factual, and concise.
+    9. When possible, mention which type of document the information came from 
+    (e.g., Resume, Aadhar, CV, etc.) based on the context.
 
     Context : {context}
 
