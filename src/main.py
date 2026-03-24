@@ -118,6 +118,6 @@ def main():
             break
         else:
             answer_query(query)
-
+            
 if __name__ == "__main__":
     main()
