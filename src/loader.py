@@ -31,3 +31,5 @@ def load_files(dataset_path):
         print(f"Loaded {len(docs)} pages from {pdf.name}")
         
     return documents
+docs = load_files("../dataset")
+print(docs)

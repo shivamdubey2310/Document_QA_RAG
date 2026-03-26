@@ -9,6 +9,6 @@ def split_documents(documents,chunk_size=800,chunk_overlap=200):
     )
     chunks = splitter.split_documents(documents)
 
-    print(f"{len(chunks)} chunks created")
+    print(f"{len(chunks)} chunks created") 
 
-    return chunks 
+    return chunks

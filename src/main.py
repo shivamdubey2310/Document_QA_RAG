@@ -4,6 +4,7 @@ from chunking import split_documents
 from embeddings import EmbeddingModel
 from vectorstore import VectorStore
 from llm_service import generate_response , rewrite_query
+from loader_images import load_images
 import os
 
 
@@ -27,8 +28,9 @@ def ingest_documents():
         print("Creating vectorDB...")
 
         ## load files
-        docs = load_files("../dataset")
-
+        # docs = load_files("../dataset")
+        docs = load_images("../image-dataset")
+       
         ## chunking
         chunks = split_documents(docs)
 

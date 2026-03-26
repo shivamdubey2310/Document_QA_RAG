@@ -7,7 +7,8 @@ def parse_with_liteparse(file_path):
     result = subprocess.run(
         ["lit", "parse", file_path, "--format", "json"],
         capture_output=True,
-        text=True
+        text=True,
+        shell = True 
     )
 
     if result.returncode != 0:
@@ -23,14 +24,14 @@ def parse_with_liteparse(file_path):
 
 def load_images(dataset_path):
     documents = []
-
+    print(" dataset_path = ", dataset_path)
     # Supported image formats
     image_extensions = ["*.png", "*.jpg", "*.jpeg", "*.webp", "*.bmp", "*.tiff"]
 
     image_files = []
     for ext in image_extensions:
         image_files.extend(Path(dataset_path).glob(f"**/{ext}"))
-
+         
     print(f"{len(image_files)} image files loaded")
 
     for img in image_files:
@@ -65,7 +66,3 @@ def load_images(dataset_path):
         print(f"Loaded {len(data.get('pages', []))} pages from {file_name}")
 
     return documents
-
-
-docs = load_images("images-dataset")
-print(docs[0].page_content)
