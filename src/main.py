@@ -16,7 +16,7 @@ embedder = EmbeddingModel()
 vectorstore = VectorStore(persist_dir=VECTOR_DB_PATH)
 
 
-def ingest_documents():
+def ingest_documents(doc_type):
     """Create vector database only if it's empty"""
 
     try:
@@ -27,9 +27,10 @@ def ingest_documents():
     if existing_count == 0:
         print("Creating vectorDB...")
 
-        ## load files
-        # docs = load_files("../dataset")
-        docs = load_images("../image-dataset")
+        if doc_type == 1: ## for pdf's
+           docs = load_files("../dataset")
+        else: ## for images 
+           docs = load_images("../image-dataset")
        
         ## chunking
         chunks = split_documents(docs)
@@ -113,7 +114,8 @@ def answer_query(query):
 
 ## main function
 def main():
-    ingest_documents()
+    doc_type = input("Enter 1 for PDFs and 2 for image : ")
+    ingest_documents(doc_type)
     while True:
         query = input("\nEnter your query : ")
         if query.lower() == "exit":
