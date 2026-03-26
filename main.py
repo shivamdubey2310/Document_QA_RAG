@@ -15,8 +15,7 @@ from vectorstore import VectorStore
 from llm_service import generate_response
 
 
-app = FastAPI(title="Policy Intelligence Engine API")
-app.mount("/ui", StaticFiles(directory="ui"), name="ui")
+app = FastAPI(title="Document Q&A")
 
 ## request schema
 class QueryRequest(BaseModel):
@@ -36,7 +35,7 @@ vectorstore = VectorStore(persist_dir="vectorDB")
 
 @app.get("/")
 def home():
-    return FileResponse("ui/index.html")
+    return "Hii"
 
 
 @app.post("/query", response_model=QueryResponse)
