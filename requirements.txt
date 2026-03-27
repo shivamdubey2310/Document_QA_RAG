@@ -11,4 +11,5 @@ chromadb
 langchain-text-splitters
 langchain-groq
 python-dotenv
+fastapi
 ## npm i -g @llamaindex/liteparse

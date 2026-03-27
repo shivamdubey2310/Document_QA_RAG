@@ -8,3 +8,9 @@
 2026-03-27 11:27:12,737 | INFO | GET http://127.0.0.1:8000/openapi.json | Time: 0.0000s
 2026-03-27 11:27:44,741 | INFO | QUERY: What is Data Validation in Pydantic ? | ANSWER: Data validation in Pydantic refers to the process of automatically parsing, validating, and serializing data using Pydantic models. Pydantic's primary way of defining data schemas is through models, w | SOURCES: ['Pydantic_ Simplifying Data Validation in Python ï¿½ Real Python_page-0003.jpg (page 1)', 'Pydantic_ Simplifying Data Validation in Python ï¿½ Real Python_page-0001.jpg (page 1)'] | TIME: 1.7912s
 2026-03-27 11:27:44,741 | INFO | POST http://127.0.0.1:8000/query | Time: 1.7933s
+2026-03-27 15:06:18,653 | INFO | GET http://127.0.0.1:8000/ | Time: 0.0000s
+2026-03-27 15:06:19,013 | INFO | GET http://127.0.0.1:8000/favicon.ico | Time: 0.0000s
+2026-03-27 15:06:20,927 | INFO | GET http://127.0.0.1:8000/docs | Time: 0.0000s
+2026-03-27 15:06:21,383 | INFO | GET http://127.0.0.1:8000/openapi.json | Time: 0.0181s
+2026-03-27 15:06:36,260 | INFO | QUERY: pydantic | ANSWER: Pydantic is a Python library used for data validation and parsing. It is a dependency of many popular Python libraries, such as LangChain and Polars, and is used by most of the largest tech companies  | SOURCES: ['Pydantic_ Simplifying Data Validation in Python – Real Python_page-0005.jpg (page 1)', 'Pydantic_ Simplifying Data Validation in Python – Real Python_page-0003.jpg (page 1)'] | TIME: 2.9136s
+2026-03-27 15:06:36,260 | INFO | POST http://127.0.0.1:8000/query | Time: 2.9242s
