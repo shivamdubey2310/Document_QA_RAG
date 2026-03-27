@@ -12,4 +12,5 @@ langchain-text-splitters
 langchain-groq
 python-dotenv
 fastapi
+uvicorn
 ## npm i -g @llamaindex/liteparse

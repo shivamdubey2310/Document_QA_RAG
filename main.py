@@ -123,3 +123,8 @@ def query_documents(request: QueryRequest):
         answer=answer,
         sources=list(set(sources))
     )
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 10000))  # Render provides PORT
+    uvicorn.run(app, host="0.0.0.0", port=port)
