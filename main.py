@@ -79,7 +79,7 @@ def query_documents(request: QueryRequest):
 
     ## retrieve documents
     results = vectorstore.collection.query(
-        query_embeddings=query_embedding.tolist(),
+        query_embeddings=query_embedding,
         n_results=5
     )
 

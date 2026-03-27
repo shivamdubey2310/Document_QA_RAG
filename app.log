@@ -14,3 +14,22 @@
 2026-03-27 15:06:21,383 | INFO | GET http://127.0.0.1:8000/openapi.json | Time: 0.0181s
 2026-03-27 15:06:36,260 | INFO | QUERY: pydantic | ANSWER: Pydantic is a Python library used for data validation and parsing. It is a dependency of many popular Python libraries, such as LangChain and Polars, and is used by most of the largest tech companies  | SOURCES: ['Pydantic_ Simplifying Data Validation in Python – Real Python_page-0005.jpg (page 1)', 'Pydantic_ Simplifying Data Validation in Python – Real Python_page-0003.jpg (page 1)'] | TIME: 2.9136s
 2026-03-27 15:06:36,260 | INFO | POST http://127.0.0.1:8000/query | Time: 2.9242s
+2026-03-27 16:08:37,697 | INFO | GET http://127.0.0.1:8000/ | Time: 0.0029s
+2026-03-27 16:08:37,698 | INFO | GET http://127.0.0.1:8000/ | Time: 0.0029s
+2026-03-27 16:08:41,412 | INFO | GET http://127.0.0.1:8000/docs | Time: 0.0000s
+2026-03-27 16:08:41,602 | INFO | GET http://127.0.0.1:8000/openapi.json | Time: 0.0156s
+2026-03-27 16:10:04,028 | INFO | GET http://127.0.0.1:8000/docs | Time: 0.0000s
+2026-03-27 16:10:04,217 | INFO | GET http://127.0.0.1:8000/openapi.json | Time: 0.0081s
+2026-03-27 16:12:56,559 | INFO | GET http://127.0.0.1:8000/docs | Time: 0.0000s
+2026-03-27 16:12:56,789 | INFO | GET http://127.0.0.1:8000/openapi.json | Time: 0.0137s
+2026-03-27 16:16:35,945 | INFO | GET http://127.0.0.1:8000/ | Time: 0.0000s
+2026-03-27 16:16:36,021 | INFO | GET http://127.0.0.1:8000/favicon.ico | Time: 0.0011s
+2026-03-27 16:16:38,971 | INFO | GET http://127.0.0.1:8000/docs | Time: 0.0000s
+2026-03-27 16:16:39,127 | INFO | GET http://127.0.0.1:8000/openapi.json | Time: 0.0133s
+2026-03-27 16:20:47,935 | INFO | GET http://127.0.0.1:8000/ | Time: 0.0000s
+2026-03-27 16:20:50,236 | INFO | GET http://127.0.0.1:8000/docs | Time: 0.0000s
+2026-03-27 16:20:50,392 | INFO | GET http://127.0.0.1:8000/openapi.json | Time: 0.0090s
+2026-03-27 16:22:41,461 | INFO | GET http://127.0.0.1:8000/docs | Time: 0.0015s
+2026-03-27 16:22:41,572 | INFO | GET http://127.0.0.1:8000/openapi.json | Time: 0.0030s
+2026-03-27 16:22:53,964 | INFO | QUERY: pydantic | ANSWER: Pydantic is a Python library used for data validation and parsing. It is a dependency of many popular Python libraries, such as LangChain and Polars, and is used by most of the largest tech companies  | SOURCES: ['Pydantic_ Simplifying Data Validation in Python – Real Python_page-0003.jpg (page 1)', 'Pydantic_ Simplifying Data Validation in Python – Real Python_page-0005.jpg (page 1)'] | TIME: 2.0332s
+2026-03-27 16:22:53,964 | INFO | POST http://127.0.0.1:8000/query | Time: 2.0347s

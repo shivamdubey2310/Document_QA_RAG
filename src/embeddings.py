@@ -1,18 +1,25 @@
-from sentence_transformers import SentenceTransformer
+import os
+import requests
 
 class EmbeddingModel:
-    """This class initializes the embedding model and create the embeddings"""
-    
-    ## initializes the embedding model
-    def __init__(self,embedding_model="all-MiniLM-L6-v2"):
-        self.model = SentenceTransformer(embedding_model)
+    def __init__(self, model="sentence-transformers/all-MiniLM-L6-v2"):
+        self.api_token = os.getenv("HF_KEY")
 
-    ## This function creates the embeddings
-    def embed(self,texts):
-        embeddings = self.model.encode(
-            texts,
-            batch_size=32,
-            show_progress_bar=True,
-            normalize_embeddings=True
+        self.url = f"https://router.huggingface.co/hf-inference/models/{model}/pipeline/feature-extraction"
+
+        self.headers = {
+            "Authorization": f"Bearer {self.api_token}",
+            "Content-Type": "application/json"
+        }
+
+    def embed(self, texts):
+        response = requests.post(
+            self.url,
+            headers=self.headers,
+            json={"inputs": texts}   # can pass list directly
         )
-        return embeddings
+
+        if response.status_code != 200:
+            raise Exception(f"HF API error: {response.text}")
+
+        return response.json()
